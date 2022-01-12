@@ -1,0 +1,51 @@
+p {
+  font-family: lato;
+}
+
+.input-main {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+}
+.auth {
+  width: 100%;
+  margin: 0 auto;
+  &__input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.input {
+  width: 20%;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  padding: 4px 6px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 2px;
+  text-transform: uppercase;
+  &__one {
+  }
+  &__two {
+  }
+  &__three {
+  }
+  &__fourth {
+  }
+}
+
+.input__test {
+  margin: 20px;
+}
