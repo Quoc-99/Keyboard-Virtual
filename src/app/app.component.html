@@ -1,99 +1,88 @@
 <div>
-  <input class="input-main" appOskInput type="text" />
+  <input [(ngModel)]="valueInput" #input class="input-main" appOskInput type="text" />
 </div>
 
 <div class="auth">
-  <div class="auth__input">
+  <div class="auth__input" (click)="focusInput()">
     <input
-      appOskInput
+      readonly
       type="text"
       maxlength="1"
       #txt1
       (keyup)="move($event, '', txt1, txt2)"
       class="input input__one"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt2
       (keyup)="move($event, txt1, txt2, txt3)"
       class="input input__two"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt3
       (keyup)="move($event, txt2, txt3, txt4)"
       class="input input__three"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt4
       (keyup)="move($event, txt3, txt4, txt5)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt5
       (keyup)="move($event, txt4, txt5, txt6)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt6
       (keyup)="move($event, txt5, txt6, txt7)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt7
       (keyup)="move($event, txt6, txt7, txt8)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt8
       (keyup)="move($event, txt7, txt8, txt9)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt9
       (keyup)="move($event, txt8, txt9, txt10)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt10
       (keyup)="move($event, txt9, txt10, txt11)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt11
       (keyup)="move($event, txt10, txt11, txt12)"
       class="input input__fourth"
     />
-    <input
-      appOskInput
+    <input readonly
       type="text"
       maxlength="1"
       #txt12

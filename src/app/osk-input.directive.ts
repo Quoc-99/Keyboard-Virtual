@@ -85,7 +85,7 @@ export class OskInputDirective implements OnInit, OnDestroy {
       element.value.substr(0, start) + key + element.value.substr(end);
     element.focus();
     element.selectionStart = element.selectionEnd = start + 1;
-    console.log(element.selectionStart);
+    // console.log(element.selectionStart);
     this.keyup.emit(key);
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { KeyboardService } from './keyboard.service';
 
 @Component({
@@ -8,9 +8,31 @@ import { KeyboardService } from './keyboard.service';
 })
 export class AppComponent {
   title = 'keyboard';
+  valueInput: string = '';
+  valueArray: any;
+  // valueInput1: string = '';
+  // valueInput2: string = '';
+  // valueInput3: string = '';
+  // valueInput4: string = '';
+  // valueInput5: string = '';
+  // valueInput6: string = '';
+  // valueInput7: string = '';
+  // valueInput8: string = '';
+  // valueInput9: string = '';
+  // valueInput10: string = '';
+  // valueInput11: string = '';
+  // valueInput12: string = '';
+  lengtInput: number = 12;
+  @ViewChild('input') input!: ElementRef;
 
   constructor(private keyboardService: KeyboardService) {
 
+  }
+
+  ngAfterViewChecked(): void {
+    //Called after every check of the component's view. Applies to components only.
+    //Add 'implements AfterViewChecked' to the class.
+    this.changeValueInput(this.input.nativeElement.value);
   }
 
   move(event: any, p: any, c: any, n: any) {
@@ -26,8 +48,14 @@ export class AppComponent {
         p.focus();
       }
     }
-    console.log();
   }
 
-  getLengthInput() {}
+  focusInput() {
+    this.input.nativeElement.focus();
+  }
+
+  changeValueInput(valueInput: string) {
+    this.valueArray = valueInput.split('');
+    console.log(this.valueArray);
+  }
 }

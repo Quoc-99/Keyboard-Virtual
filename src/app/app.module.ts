@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { KeyboardKeyDirective } from './keyboard-key.directive';
 import { OskInputDirective } from './osk-input.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OskInputDirective } from './osk-input.directive';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
